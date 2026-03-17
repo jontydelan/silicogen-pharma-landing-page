@@ -2,9 +2,9 @@ name: Keep Render App Awake
 
 on:
   schedule:
-    # Runs every 14 minutes during hour 0, and hours 6 through 23.
-    # It pauses entirely for hours 1, 2, 3, 4, and 5.
-    - cron: '*/14 0,6-23 * * *'
+    # Runs every 14 minutes, but ONLY between 1:00 UTC and 18:59 UTC
+    # In IST, this runs from 6:30 AM to 12:30 AM, and pauses overnight!
+    - cron: '*/14 1-19 * * *'
   workflow_dispatch: 
 
 jobs:
