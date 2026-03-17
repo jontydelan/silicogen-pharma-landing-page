@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs every 14 minutes, but ONLY between 1:00 UTC and 18:59 UTC
     # In IST, this runs from 6:30 AM to 12:30 AM, and pauses overnight!
-    - cron: '*/14 1-19 * * *'
+    - cron: '*/12 1-20 * * *'
   workflow_dispatch: 
 
 jobs:
